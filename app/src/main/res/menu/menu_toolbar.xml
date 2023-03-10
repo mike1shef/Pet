@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/mainScreenFragment"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="Home"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/mementoFragment"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="Memos"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="Profile"
+        app:showAsAction="always"
+        />
+
+
+
+</menu>
