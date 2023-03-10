@@ -8,16 +8,16 @@
     <fragment
         android:id="@+id/mainScreenFragment"
         android:name="com.roadmod.myapplication.MainScreenFragment"
-        android:label="fragment_main_screen"
+        android:label="Outey"
         tools:layout="@layout/fragment_main_screen" />
     <fragment
         android:id="@+id/mementoFragment"
         android:name="com.roadmod.myapplication.MementoFragment"
-        android:label="fragment_memento"
+        android:label="My bookmarks"
         tools:layout="@layout/fragment_memento" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.roadmod.myapplication.ProfileFragment"
-        android:label="fragment_profile"
+        android:label="My Profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>
