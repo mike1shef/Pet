@@ -1,7 +1,8 @@
 package com.roadmod.myapplication
 
 import androidx.lifecycle.ViewModel
+import com.roadmod.myapplication.repository.BookmarkDao
 
-class MainScreenViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+class MainScreenViewModel (dao: BookmarkDao) : ViewModel() {
+
 }

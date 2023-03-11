@@ -4,20 +4,30 @@
  import android.view.LayoutInflater
  import android.view.View
  import android.view.ViewGroup
+ import androidx.lifecycle.ViewModelProvider
+ import com.roadmod.myapplication.databinding.FragmentMainScreenBinding
+ import com.roadmod.myapplication.repository.AppOutDataBase
 
  class MainScreenFragment : Fragment() {
-
-        companion object {
-            fun newInstance() = MementoFragment()
-        }
-
-        private lateinit var viewModel: MementoViewModel
+     private var _binding : FragmentMainScreenBinding? = null
+     private val binding get() = _binding!!
 
         override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
         ): View? {
-            return inflater.inflate(R.layout.fragment_main_screen, container, false)
+            _binding = FragmentMainScreenBinding.inflate(inflater, container, false)
+            val view = binding.root
+            val application = requireNotNull(this.activity).application
+            val dao = AppOutDataBase.getInstance(application).bookmarkDao
+            val viewModelFactory = MainScreenViewModelFactory(dao)
+            val viewModel = ViewModelProvider(
+                this, viewModelFactory)[MainScreenViewModel::class.java]
+            return view
         }
 
+     override fun onDestroyView() {
+         super.onDestroyView()
+         _binding = null
+     }
  }
