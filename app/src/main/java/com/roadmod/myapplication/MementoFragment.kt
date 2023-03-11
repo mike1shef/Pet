@@ -24,7 +24,7 @@ class MementoFragment : Fragment() {
         val dao = AppOutDataBase.getInstance(application).bookmarkDao
         val viewModelFactory = MementoViewModelFactory(dao)
         val viewModel = ViewModelProvider(
-            this, viewModelFactory).get(MementoViewModel::class.java)
+            this, viewModelFactory)[MementoViewModel::class.java]
         return view
     }
 
