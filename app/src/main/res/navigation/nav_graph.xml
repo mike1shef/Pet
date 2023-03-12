@@ -12,9 +12,9 @@
         tools:layout="@layout/fragment_main_screen" />
     <fragment
         android:id="@+id/mementoFragment"
-        android:name="com.roadmod.myapplication.MementoFragment"
+        android:name="com.roadmod.myapplication.LibraryFragment"
         android:label="My bookmarks"
-        tools:layout="@layout/fragment_memento" />
+        tools:layout="@layout/fragment_library" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.roadmod.myapplication.ProfileFragment"

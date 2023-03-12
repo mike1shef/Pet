@@ -7,7 +7,7 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.roadmod.myapplication.repository.Bookmark
 
-class OuteyItemAdapter : RecyclerView.Adapter<OuteyItemAdapter.OuteyItemViewHolder>() {
+class LibraryItemAdapter : RecyclerView.Adapter<LibraryItemAdapter.LibraryItemViewHolder>() {
     var data = listOf<Bookmark>()
         set (value) {
             field = value
@@ -16,29 +16,29 @@ class OuteyItemAdapter : RecyclerView.Adapter<OuteyItemAdapter.OuteyItemViewHold
 
     override fun getItemCount() = data.size
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OuteyItemViewHolder = OuteyItemViewHolder.inflateFrom(parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LibraryItemViewHolder = LibraryItemViewHolder.inflateFrom(parent)
 
-    override fun onBindViewHolder(holder: OuteyItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: LibraryItemViewHolder, position: Int) {
         val item = data[position]
         holder.bind(item)
     }
 
-    class OuteyItemViewHolder(private val rootView: CardView)
+    class LibraryItemViewHolder(private val rootView: CardView)
         : RecyclerView.ViewHolder(rootView) {
-        val outeyAddress: TextView = rootView.findViewById<TextView>(R.id.item_title)
+        private val bookmarkURL: TextView = rootView.findViewById<TextView>(R.id.item_title)
 
         companion object {
-            fun inflateFrom(parent: ViewGroup) : OuteyItemViewHolder {
+            fun inflateFrom(parent: ViewGroup) : LibraryItemViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val view = layoutInflater
-                    .inflate(R.layout.outey_item, parent, false) as CardView
-                return OuteyItemViewHolder(view)
+                    .inflate(R.layout.library_item, parent, false) as CardView
+                return LibraryItemViewHolder(view)
             }
 
         }
 
             fun bind(item: Bookmark){
-                outeyAddress.text = item.bookmarkAddress
+                bookmarkURL.text = item.bookmarkAddress
             }
 
         }

@@ -7,28 +7,28 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
-import com.roadmod.myapplication.databinding.FragmentMementoBinding
+import com.roadmod.myapplication.databinding.FragmentLibraryBinding
 import com.roadmod.myapplication.repository.AppOutDataBase
 
-class MementoFragment : Fragment() {
-    private var _binding : FragmentMementoBinding? = null
+class LibraryFragment : Fragment() {
+    private var _binding : FragmentLibraryBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentMementoBinding.inflate(inflater, container, false)
+        _binding = FragmentLibraryBinding.inflate(inflater, container, false)
         val view = binding.root
 
         val application = requireNotNull(this.activity).application
         val dao = AppOutDataBase.getInstance(application).bookmarkDao
-        val viewModelFactory = MementoViewModelFactory(dao)
+        val viewModelFactory = LibraryViewModelFactory(dao)
         val viewModel = ViewModelProvider(
-            this, viewModelFactory)[MementoViewModel::class.java]
+            this, viewModelFactory)[LibraryViewModel::class.java]
 
-        val adapter = OuteyItemAdapter()
-        binding.oteyList.adapter = adapter
+        val adapter = LibraryItemAdapter()
+        binding.bookmarkList.adapter = adapter
 
         viewModel.bookmarks.observe(viewLifecycleOwner, Observer {
             it?.let {
