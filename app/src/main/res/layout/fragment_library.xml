@@ -24,7 +24,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Recently Added" />
+            android:text="To explore" />
 
         <Button
             android:id="@+id/button2"
@@ -32,15 +32,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Completed" />
-
-        <Button
-            android:id="@+id/button3"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="All" />
+            android:text="Finished" />
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
