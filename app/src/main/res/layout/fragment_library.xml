@@ -24,7 +24,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button1" />
+            android:text="Recently Added" />
 
         <Button
             android:id="@+id/button2"
@@ -32,7 +32,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button2" />
+            android:text="Completed" />
 
         <Button
             android:id="@+id/button3"
@@ -40,7 +40,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Button3" />
+            android:text="All" />
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
