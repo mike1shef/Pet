@@ -1,5 +1,8 @@
 package com.roadmod.myapplication
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
@@ -39,6 +42,14 @@ class LibraryItemAdapter : RecyclerView.Adapter<LibraryItemAdapter.LibraryItemVi
 
             fun bind(item: Bookmark){
                 bookmarkURL.text = item.bookmarkAddress
+
+                rootView.setOnClickListener {
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(item.bookmarkAddress))
+                    try {
+                        rootView.context.startActivity(intent)
+                    } catch (e: ActivityNotFoundException) { }
+                }
+
             }
 
         }

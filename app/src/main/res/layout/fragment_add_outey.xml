@@ -16,7 +16,7 @@
             style="@style/MaterialAlertDialog.Material3.Title.Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add bookmark"
+            android:text="Add outey"
             android:padding="6dp"
             android:layout_gravity="center">
         </TextView>
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="6dp"
-            android:text="Paste the url of your bookmark here"
+            android:text="Add your exit candidate"
             android:layout_gravity="center">
         </TextView>
 
