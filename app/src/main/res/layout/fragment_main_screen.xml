@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="12dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="24dp"
     tools:context=".MainScreenFragment">
 
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,17 +20,15 @@
             android:id="@+id/main_card"
             style="@style/Widget.Material3.CardView.Filled"
             android:layout_width="match_parent"
-            android:layout_height="232dp"
-            app:cardCornerRadius="35dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
+            android:layout_height="236dp"
+            app:cardCornerRadius="35dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Main element of entire screen"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:text="Main element of entire screen" />
+
         </androidx.cardview.widget.CardView>
 
     </FrameLayout>

@@ -1,7 +1,10 @@
 package com.roadmod.myapplication
 
 import androidx.lifecycle.ViewModel
+import com.roadmod.myapplication.repository.BookmarkDao
 
-class MementoViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+class MementoViewModel (dao: BookmarkDao) : ViewModel() {
+    val bookmarks = dao.getAll()
+
+
 }
