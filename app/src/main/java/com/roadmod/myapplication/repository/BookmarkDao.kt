@@ -7,7 +7,7 @@ import androidx.room.*
 interface BookmarkDao {
 
     @Insert
-    fun insert (bookmark: Bookmark)
+    suspend fun insert (bookmark: Bookmark)
 
     @Insert
     fun insertAll (bookmark: List<Bookmark>)

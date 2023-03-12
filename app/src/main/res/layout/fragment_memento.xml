@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="10dp"
+        android:paddingTop="24dp"
         android:paddingBottom="15dp"
         app:singleSelection="true">
 
@@ -44,8 +45,10 @@
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/otey_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/outey_item"/>
 
 </LinearLayout>

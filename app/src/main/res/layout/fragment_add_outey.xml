@@ -35,7 +35,6 @@
             android:id="@+id/dialog_addUrl"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:accessibilityPaneTitle=""
             android:hint="Past your url here"/>
 
 <!--        <LinearLayout-->

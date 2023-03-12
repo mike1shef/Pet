@@ -11,6 +11,7 @@
  import androidx.fragment.app.DialogFragment
  import androidx.lifecycle.ViewModelProvider
  import androidx.navigation.findNavController
+ import androidx.navigation.fragment.findNavController
  import com.roadmod.myapplication.databinding.FragmentMainScreenBinding
  import com.roadmod.myapplication.repository.AppOutDataBase
 
@@ -31,16 +32,19 @@
                 this, viewModelFactory)[MainScreenViewModel::class.java]
 
             val fab = binding.fab
+            var alertDialog: AlertDialog? = null
 
             fab.setOnClickListener {
-                showEditTextDialog()
+                showEditTextDialog(viewModel)
             }
 
             return view
         }
 
-     private fun showEditTextDialog() {
-         val builder = AlertDialog.Builder(context)
+     private var alertDialog: AlertDialog? = null
+
+     private fun showEditTextDialog(viewModel: MainScreenViewModel) {
+         val builder = AlertDialog.Builder(requireContext())
 
          // Inflate the dialog layout and get the EditText view
          val dialogLayout = layoutInflater.inflate(R.layout.fragment_add_outey, null)
@@ -52,19 +56,19 @@
          builder.setPositiveButton("OK") { _, _ ->
              // Do something with the entered text
              val text = editText.text.toString()
-             // ...
+             viewModel.newBookmarkAddress = text
+             viewModel.addBookmark()
          }
 
          builder.setNegativeButton("Cancel") { _, _ -> }
 
-         builder.show()
+         alertDialog = builder.create()
+         alertDialog?.show()
      }
-
-
-
 
      override fun onDestroyView() {
          super.onDestroyView()
+         alertDialog?.dismiss()
          _binding = null
      }
  }

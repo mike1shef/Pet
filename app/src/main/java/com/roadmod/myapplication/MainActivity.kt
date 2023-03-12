@@ -15,15 +15,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
+//        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+//        setSupportActionBar(toolbar)
 
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
         val builder = AppBarConfiguration.Builder(navController.graph)
-        val appBarConfiguration = builder.build()
-        toolbar.setupWithNavController(navController, appBarConfiguration)
+//        val appBarConfiguration = builder.build()
+//        toolbar.setupWithNavController(navController, appBarConfiguration)
 
         val bottomNavView = findViewById<BottomNavigationView>(R.id.bottom_nav)
         bottomNavView.setupWithNavController(navController)
