@@ -4,16 +4,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/mainScreenFragment"
-        android:icon="@android:drawable/ic_dialog_email"
-        android:title="Home"
+        android:id="@+id/mementoFragment"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="Library"
         app:showAsAction="always"
         />
 
     <item
-        android:id="@+id/mementoFragment"
-        android:icon="@android:drawable/ic_menu_send"
-        android:title="Memos"
+        android:id="@+id/mainScreenFragment"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="Home"
         app:showAsAction="always"
         />
 
