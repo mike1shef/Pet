@@ -49,8 +49,6 @@ class LibraryItemAdapter : RecyclerView.Adapter<LibraryItemAdapter.LibraryItemVi
                         rootView.context.startActivity(intent)
                     } catch (e: ActivityNotFoundException) { }
                 }
-
             }
-
         }
 }

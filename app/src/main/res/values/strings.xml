@@ -2,4 +2,7 @@
     <string name="app_name">Outey</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_your_exit_candidate">Add your exit candidate</string>
+    <string name="past_your_url_here">Past your url here</string>
+    <string name="add_outey">Add outey</string>
 </resources>

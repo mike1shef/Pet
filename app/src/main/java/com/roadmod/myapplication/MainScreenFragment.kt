@@ -1,17 +1,12 @@
  package com.roadmod.myapplication
  import android.app.AlertDialog
- import android.app.Dialog
  import android.os.Bundle
- import android.view.ContextThemeWrapper
  import androidx.fragment.app.Fragment
  import android.view.LayoutInflater
  import android.view.View
  import android.view.ViewGroup
  import android.widget.EditText
- import androidx.fragment.app.DialogFragment
  import androidx.lifecycle.ViewModelProvider
- import androidx.navigation.findNavController
- import androidx.navigation.fragment.findNavController
  import com.roadmod.myapplication.databinding.FragmentMainScreenBinding
  import com.roadmod.myapplication.repository.AppOutDataBase
 
